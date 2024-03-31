@@ -1,27 +1,34 @@
 using UnityEngine;
 using TMPro;
 using System.IO.Enumeration;
+using BreakInfinity;
 
 public class Controller : MonoBehaviour
 {
 
     public Data data;
+    public UpgradeManager upgradeManager;
 
     [SerializeField] private TMP_Text currencyText;
+    [SerializeField] private TMP_Text clickPowerText;
 
-    private void Start()
+    public BigDouble clickPower() => 1 + data.clickUpgradeLevel;
+
+    public void Start()
     {
         data = new Data();
+        upgradeManager.StartUpgradeManager();
     }
 
-    private void Update()
+    public void Update()
     {
         currencyText.text = data.cerezas + " Cerezas";
+        clickPowerText.text = "+" + clickPower() + " Cerezas";
     }
 
     public void GenerateCerezas()
     {
-        data.cerezas += 1;
+        data.cerezas += clickPower();
     }
 
     public void RemoveCerezas()
