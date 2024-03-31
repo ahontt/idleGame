@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using BreakInfinity;
 
 public class Data
 {
-    public double cerezas;
+    public BigDouble cerezas;
 
     public Data()
     {

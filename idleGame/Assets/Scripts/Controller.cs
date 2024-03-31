@@ -1,19 +1,20 @@
 using UnityEngine;
 using TMPro;
+using System.IO.Enumeration;
 
 public class Controller : MonoBehaviour
 {
 
     public Data data;
 
-    public TMP_Text currencyText;
+    [SerializeField] private TMP_Text currencyText;
 
-    public void Start()
+    private void Start()
     {
         data = new Data();
     }
 
-    public void Update()
+    private void Update()
     {
         currencyText.text = data.cerezas + " Cerezas";
     }
@@ -21,5 +22,10 @@ public class Controller : MonoBehaviour
     public void GenerateCerezas()
     {
         data.cerezas += 1;
+    }
+
+    public void RemoveCerezas()
+    {
+        data.cerezas -= 1;
     }
 }
