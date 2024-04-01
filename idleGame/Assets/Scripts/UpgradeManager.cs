@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public Controller controller;
+
+    public static UpgradeManager instance;
+
+    private void Awake() => instance = this;
+
     public Data data;
 
     public Upgrades clickUpgrade;
@@ -17,7 +21,6 @@ public class UpgradeManager : MonoBehaviour
 
     public void StartUpgradeManager()
     {
-        data = controller.data;
 
         clickUpgradeName = "Cerezas Por Click";
 
@@ -28,22 +31,22 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpdateClickUpgradeUI()
     {
-        clickUpgrade.LevelText.text = controller.data.clickUpgradeLevel.ToString();
+        clickUpgrade.LevelText.text = Controller.instance.data.clickUpgradeLevel.ToString();
         clickUpgrade.CostText.text = "Cost " +  Cost().ToString(format:"F2") + " Cerezas";
         clickUpgrade.NameText.text = "+1 " + clickUpgradeName;
     }
 
     public BigDouble Cost()
     {
-        return clickUpgradeBase * BigDouble.Pow(clickUpgradeMult, data.clickUpgradeLevel);
+        return clickUpgradeBase * BigDouble.Pow(clickUpgradeMult, Controller.instance.data.clickUpgradeLevel);
     }
 
     public void BuyUpgrade()
     {
-        if (controller.data.cerezas >= Cost())
+        if (Controller.instance.data.cerezas >= Cost())
         {
-            controller.data.cerezas -= Cost();
-            controller.data.clickUpgradeLevel += 1;
+            Controller.instance.data.cerezas -= Cost();
+            Controller.instance.data.clickUpgradeLevel += 1;
         }
 
         UpdateClickUpgradeUI();

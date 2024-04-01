@@ -2,12 +2,16 @@ using UnityEngine;
 using TMPro;
 using System.IO.Enumeration;
 using BreakInfinity;
+using System.Net.NetworkInformation;
 
 public class Controller : MonoBehaviour
 {
 
+    public static Controller instance;
+
+    private void Awake() => instance = this;
+
     public Data data;
-    public UpgradeManager upgradeManager;
 
     [SerializeField] private TMP_Text currencyText;
     [SerializeField] private TMP_Text clickPowerText;
@@ -17,7 +21,7 @@ public class Controller : MonoBehaviour
     public void Start()
     {
         data = new Data();
-        upgradeManager.StartUpgradeManager();
+        UpgradeManager.instance.StartUpgradeManager();
     }
 
     public void Update()
