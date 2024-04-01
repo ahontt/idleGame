@@ -13,4 +13,6 @@ The game is made using Unity 2022.3.22f1 and C#. The objective is making this ga
 While this readme is in English, most of the commits and project will be in Spanish as it's my mother tongue
 
 ### Project Support
-This project is provided as is, use it as you please but I will not give any support
+This project is provided as is, use it as you please but I will not give any support.
+
+Once the project is finished, I will try my best to comment the code and explain every little step in detail for anyone that wants to use this codebase but, again, no direct support will be given

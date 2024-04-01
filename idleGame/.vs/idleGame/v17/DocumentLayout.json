@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Development\\Unity\\idleGame\\idleGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|d:\\development\\unity\\idlegame\\idlegame\\assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|D:\\Development\\Unity\\idleGame\\idleGame\\assets\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|d:\\development\\unity\\idlegame\\idlegame\\assets\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|d:\\development\\unity\\idlegame\\idlegame\\assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DE5672A-3F63-6D51-B3B1-99D819C046CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Controller.cs",
               "DocumentMoniker": "D:\\Development\\Unity\\idleGame\\idleGame\\Assets\\Scripts\\Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Controller.cs",
@@ -36,13 +36,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Data.cs",
               "DocumentMoniker": "D:\\Development\\Unity\\idleGame\\idleGame\\Assets\\Scripts\\Data.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Data.cs",
               "ToolTip": "D:\\Development\\Unity\\idleGame\\idleGame\\Assets\\Scripts\\Data.cs",
               "RelativeToolTip": "Assets\\Scripts\\Data.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-31T22:26:21.968Z",
               "EditorCaption": ""

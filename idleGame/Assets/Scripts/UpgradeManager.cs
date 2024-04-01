@@ -27,6 +27,8 @@ public class UpgradeManager : MonoBehaviour
 
     public void StartUpgradeManager()
     {
+        Methods.UpgradeCheck(Controller.instance.data.clickUpgradeLevel, length: 4);
+        
         clickUpgradeNames = new []{"Click Power +1", "Click Power +5", "Click Power +10"};
         clickUpgradeBase = new BigDouble[]{10, 50, 100};
         clickUpgradeBasePower = new BigDouble[]{1.25, 1.35, 1.55};
