@@ -16,7 +16,16 @@ public class Controller : MonoBehaviour
     [SerializeField] private TMP_Text currencyText;
     [SerializeField] private TMP_Text clickPowerText;
 
-    public BigDouble clickPower() => 1 + data.clickUpgradeLevel;
+    public BigDouble clickPower()
+    {
+        BigDouble total = 0;
+        for (int i = 0; i < data.clickUpgradeLevel.Count; i++)
+        {
+            total += UpgradeManager.instance.clickUpgradeBasePower[i] * data.clickUpgradeLevel[i];
+        }
+        
+        return total;
+    } 
 
     public void Start()
     {
@@ -30,13 +39,5 @@ public class Controller : MonoBehaviour
         clickPowerText.text = "+" + clickPower() + " Cerezas";
     }
 
-    public void GenerateCerezas()
-    {
-        data.cerezas += clickPower();
-    }
-
-    public void RemoveCerezas()
-    {
-        data.cerezas -= 1;
-    }
+    public void GenerateCerezas() => data.cerezas += clickPower();
 }
