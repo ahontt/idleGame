@@ -8,7 +8,6 @@ public class UpgradeManager : MonoBehaviour
 {
 
     public static UpgradeManager instance;
-
     private void Awake() => instance = this;
 
     public Data data;
@@ -17,7 +16,7 @@ public class UpgradeManager : MonoBehaviour
     public Upgrades clickUpgradePrefab;
 
     public ScrollRect clickUpgradesScroll;
-    public GameObject clickUpgradesPanel;
+    public Transform clickUpgradesPanel;
 
     public string[] clickUpgradeNames;
 
@@ -27,16 +26,16 @@ public class UpgradeManager : MonoBehaviour
 
     public void StartUpgradeManager()
     {
-        Methods.UpgradeCheck(Controller.instance.data.clickUpgradeLevel, length: 4);
+        Methods.UpgradeCheck(Controller.instance.data.clickUpgradeLevel, length: 3);
         
         clickUpgradeNames = new []{"Click Power +1", "Click Power +5", "Click Power +10"};
         clickUpgradeBase = new BigDouble[]{10, 50, 100};
-        clickUpgradeBasePower = new BigDouble[]{1.25, 1.35, 1.55};
+        clickUpgradeMult = new BigDouble[]{1.25, 1.35, 1.55};
         clickUpgradeBasePower = new BigDouble[]{1, 5, 10};
 
         for (int i = 0; i < Controller.instance.data.clickUpgradeLevel.Count;)
         {
-            Upgrades upgrade = Instantiate(clickUpgradePrefab, clickUpgradesPanel.transform);
+            Upgrades upgrade = Instantiate(clickUpgradePrefab, clickUpgradesPanel);
             upgrade.UpgradeID = i;
             clickUpgrades.Add(upgrade);
         }
@@ -53,8 +52,8 @@ public class UpgradeManager : MonoBehaviour
         void UpdateUI(int ID)
         {
                 clickUpgrades[ID].LevelText.text = Controller.instance.data.clickUpgradeLevel[ID].ToString();
-                clickUpgrades[ID].CostText.text = $"Cost {ClickUpgradeCost(ID).ToString(format:"F2")} Cerezas";
-                clickUpgrades[ID].NameText.text = "+1 " + clickUpgradeNames[ID];
+                clickUpgrades[ID].CostText.text = $"Cost {ClickUpgradeCost(ID).ToString("F2")} Cerezas";
+                clickUpgrades[ID].NameText.text = clickUpgradeNames[ID];
         }
     }
 

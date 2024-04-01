@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "idleGame.sln"
+    "dotnet.defaultSolution": "idleGame.sln",
+    "dotnet.preferCSharpExtension": true
 }

@@ -12,12 +12,12 @@ public class Methods : MonoBehaviour
     {
         try
         {
-            if (list.Count == 0) list = new T[length].ToList();
+            if (list.Count == 0) list = CreateList<T>(length);
             while(list.Count < length) list.Add(item: new T());
         }
         catch
         {
-            list = new T[length].ToList();
+            list = CreateList<T>(length);
         }
     }
 
